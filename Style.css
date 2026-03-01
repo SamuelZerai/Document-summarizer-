@@ -8,6 +8,8 @@ box-sizing: border-box;
     --background: #ffffff;
     --text: #111111;
     --border: #cccccc;
+    --accent: #4f46e5;
+    --placeholder: #888888;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,5 +17,64 @@ box-sizing: border-box;
         --background: #1a1a1a;
         --text: #f0f0f0;
         --border: #444444;
+        --accent: #6366f1;
+        --placeholder: #aaaaaa;
     }
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 12rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 1rem;
+    resize: vertical;
+    }
+
+textarea::placeholder {
+    color: var(--placeholder);
+    opacity: 1;
+}
+
+button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+   opacity: 0.9;
+}
+
+#resultat {
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+
 }
