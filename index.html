@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Summarizer</title>
+    <title>homeBot</title>
     <link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="script.js" defer></script>
 </head>
 <body>
     <main>
-        <h1> Document Summarizer</h1>
-        <div id="file-info"></div>
-
-        <textarea id="text-input" placeholder="Klistra in din text eller släpp din fil här"></textarea>
-        
-        <button id="summarize-btn">Sammanfatta</button>
-        
-        <div id="resultat"></div>
-    </main>
+    <div id="header">
+        <h1>homeBot</h1>
+        <button id="shutdown-btn">Stäng av</button>
+    </div>
+    <div id="chat"></div>
+    <button id="clear-btn">Rensa</button>
+    <div id="file-info"></div>
+    <textarea id="text-input" placeholder="Skriv ett meddelande..."></textarea>
+    <button id="summarize-btn">Skicka</button>
+</main>
 </body>
 </html>

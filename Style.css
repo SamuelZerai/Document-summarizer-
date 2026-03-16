@@ -25,6 +25,7 @@ box-sizing: border-box;
 body {
     background-color: var(--background);
     color: var(--text);
+    font-family: "Calibri", sans-serif;
 }
 
 main {
@@ -33,9 +34,30 @@ main {
     padding: 2rem;
 }
 
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
 h1 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+}
+
+#shutdown-btn {
+    background: none;
+    color: var(--placeholder);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+
+#shutdown-btn:hover {
+    color: #e55;
+    border-color: #e55;
+    opacity: 1;
 }
 
 #file-info {
@@ -89,10 +111,105 @@ button:hover {
    opacity: 0.9;
 }
 
-#resultat {
-    padding: 1rem 1.5rem;
-    border: 1px solid var(--border);
+#chat {
+    height: 60vh;
+    overflow-y: auto;
     border-radius: 0.5rem;
-    margin-top: 1rem;
-
+    padding: 1rem;
+    margin-bottom: 0.5rem;
 }
+
+#clear-btn {
+    background: none;
+    color: var(--placeholder);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#clear-btn:hover {
+    color: var(--text);
+    border-color: var(--text);
+    opacity: 1;
+}
+
+.message-user {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem 1rem 0.25rem 1rem;
+    margin-bottom: 0.75rem;
+    max-width: 95%;
+    margin-left: auto;
+}
+
+.message-ai {
+    background-color: var(--border);
+    color: var(--text);
+    padding: 0.75rem 1rem;
+    border-radius: 1rem 1rem 1rem 0.25rem;
+    margin-bottom: 0.75rem;
+    max-width: 95%;
+}
+
+#chat::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+#chat::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 9999px;
+}
+
+.file-tag {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-bottom: 0.25rem;
+}
+
+.copy-btn {
+    background: none;
+    color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.15rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.copy-btn:hover {
+    color: white;
+    border-color: rgba(255,255,255,0.6);
+    opacity: 1;
+}
+
+.loading {
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.message-ai p { margin: 0.4rem 0; }
+.message-ai p:first-child { margin-top: 0; }
+.message-ai p:last-child { margin-bottom: 0; }
+.message-ai ul, .message-ai ol { padding-left: 1.25rem; margin: 0.4rem 0; }
+.message-ai code {
+    background-color: rgba(0,0,0,0.15);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+}
+.message-ai pre {
+    background-color: rgba(0,0,0,0.15);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 0.5rem 0;
+}
+.message-ai pre code { background: none; padding: 0; }
