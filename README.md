@@ -1,14 +1,13 @@
 # homeBot
 
 En lokal AI-chatt som körs helt på din dator via [Ollama](https://ollama.com) och Llama 3.2. 
+Fungerar utmärkt för korta sammanfattning 
 
 ## Funktioner
 
 - Chatta med en lokal AI-modell
 - Bifoga filer som AI:n kan läsa och analysera (PDF, TXT, DOCX)
-- Streaming-svar — texten skrivs ut ord för ord
 - Kopiera AI-svar med ett klick
-- Rensa chatten utan att ladda om sidan
 - Stäng av Ollama och servern direkt från gränssnittet
 
 ## Krav
